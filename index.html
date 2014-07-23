@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CNCFlora - Visão geral de fluxo de trabalho.</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"> -->
+    <style type="text/css">
+        h1 {
+            font-size: 20px;
+            line-height: 22px;
+        }
+        h2 {
+            font-size: 18px;
+            line-height: 20px;
+        }
+        .btn {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .panel-body li {
+            list-style: none;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+
+    <header class="col-md-12">
+        <h1>CNCFlora - Visão geral de fluxo de trabalho.</h1>
+    </header>
+
+    <!--
+    <div class="col-md-3" id='who'>
+        <h2>Usuário</h2>
+        <button id="login" class='btn btn-primary'>Login</button>
+        <p>
+            <span></span>
+        </p>
+        <ul> </ul>
+    </div>
+    -->
+
+    <div class="class col-md-9">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#geral">
+                            Ferramentas de uso geral/administrativo
+                          </a>
+                    </h3>
+                </div>
+                <div id="geral" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <ul>
+                            <li>
+                                <a href="/flora" target='_blank' class='btn btn-default'>
+                                    Flora
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/connect" target='_blank' class='btn btn-default'>
+                                    Usuários
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/biblio" target='_blank' class='btn btn-default'>
+                                    Bibliografia
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/images" target='_blank' class='btn btn-default'>
+                                    Imagens
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#plantas_raras">
+                            Plantas raras do cerrado
+                          </a>
+                    </h3>
+                </div>
+                <div id="plantas_raras" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Consolidação, Análise e validação</h4>
+                        <ul>
+                            <li>
+                                <a href="/plantas_raras_cerrado_taxonomy" target='_blank' class='btn btn-default'>
+                                    Taxonomia
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/plantas_raras_cerrado_occurrences" target='_blank' class='btn btn-default'>
+                                    Ocorrências (<strong>SIG</strong>)
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/plantas_raras_cerrado_profiles" target='_blank' class='btn btn-default'>
+                                    Consolidação e análise
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/plantas_raras_cerrado_profiles" target='_blank' class='btn btn-default'>
+                                    <strong>Validação</strong>
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/plantas_raras_cerrado_profiles" target='_blank' class='btn btn-default'>
+                                    Revisão
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/plantas_raras_cerrado_occurrences" target='_blank' class='btn btn-default'>
+                                    Revisão SIG
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-ok"></span></li>
+                        </ul>
+                        <h4>Avaliação de risco de extinção</h4>
+                        <ul>
+                            <li>
+                                <a href="/plantas_raras_cerrado_assessment" target='_blank' class='btn btn-default'>
+                                    Avaliação
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-left"></span></li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/plantas_raras_cerrado_assessment" target='_blank' class='btn btn-default'>
+                                    Revisão
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/plantas_raras_cerrado_assessment" target='_blank' class='btn btn-default'>
+                                    Comentários
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-ok"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#cerrado">
+                            Planos de ação Cerrado
+                        </a>
+                    </h3>
+                </div>
+                <div id="cerrado" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <h4>Consolidação, Análise e validação</h4>
+                        <ul>
+                            <li>
+                                <a href="/planos_cerrado_taxonomy" target='_blank' class='btn btn-default'>
+                                    Taxonomia
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/planos_cerrado_occurrences" target='_blank' class='btn btn-default'>
+                                    Ocorrências (<strong>SIG</strong>)
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/planos_cerrado_profiles" target='_blank' class='btn btn-default'>
+                                    Consolidação e análise
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/planos_cerrado_profiles" target='_blank' class='btn btn-default'>
+                                    <strong>Validação</strong>
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/planos_cerrado_profiles" target='_blank' class='btn btn-default'>
+                                    Revisão
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-arrow-right"></span></li>
+                            <li>
+                                <a href="/planos_cerrado_occurrences" target='_blank' class='btn btn-default'>
+                                    Revisão SIG
+                                </a>
+                            </li>
+                            <li><span class="glyphicon glyphicon-ok"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div id="chart"></div>
+    </div>
+
+</div>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/jsapi" type="text/javascript"></script>
+    <!-- <script src="/connect/js/connect.js" type="text/javascript"></script> -->
+    <script src="app.js" type="text/javascript"></script>
+    <script src="chart.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        google.load('visualization', '1.0', {'packages':['corechart']});
+        google.setOnLoadCallback(drawChart);
+    </script>
+
+</body>
+</html>
