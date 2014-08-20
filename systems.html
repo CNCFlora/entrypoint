@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Sistemas cncflora</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style type="text/css">
+        iframe {
+            height: 400px;
+            width: 840px;
+            border: none;
+        }
+        div.app {
+            margin-bottom: 10px;
+            border: thin black solid;
+        }
+    </style>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <header class="col-md-12">
             <h1>CNCFlora - Sistemas</h1>
         </header>
-        <ul id='systems'>
-        </ul>
+        <div id='systems'>
+        </div>
     </div>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -57,16 +68,27 @@
 
 
                 for(var i in links) {
-                    var html = '<li><strong>'+links[i].name+'</strong><ul>';
+                    var html = '<div class="col-md-12 app">';
+                    html += "<h2><a href='"+links[i].url+"'>"+links[i].name+"</a></h2>";
+                    /*
+                    html += '<ul class="col-md-4">';
                     html += "<li><a href='"+links[i].url+"'>"+links[i].url+"</a></li>";
                     for(var p in links[i].ports) {
                         html += "<li><a href='http://"+links[i].host+":"+links[i].ports[p][1]+"'>"
                                 +"http://"+links[i].host+":"+links[i].ports[p][0]+"</a></li>";
                     }
-                    html += "</ul></li>";
+                    html += "</ul>";
+                    */
+                    for(var p in links[i].ports) {
+                        if(links[i].ports[p][0] == '9001' ) {
+                            html += "<iframe src='http://"+links[i].host+":"+links[i].ports[p][1]+"'></iframe>";
+                        }
+                    }
+                    html += "</div>";
                     console.log(html)
-                    $("ul#systems").append(html);
+                    $("#systems").append(html);
                 }
+
             });
         });
     </script>
