@@ -68,17 +68,14 @@
 
 
                 for(var i in links) {
-                    var html = '<div class="col-md-12 app">';
+                    var html = "<div class='col-md-12 app'>";
                     html += "<h2><a href='"+links[i].url+"'>"+links[i].name+"</a></h2>";
-                    /*
-                    html += '<ul class="col-md-4">';
-                    html += "<li><a href='"+links[i].url+"'>"+links[i].url+"</a></li>";
+                    html += "<p>";
                     for(var p in links[i].ports) {
-                        html += "<li><a href='http://"+links[i].host+":"+links[i].ports[p][1]+"'>"
-                                +"http://"+links[i].host+":"+links[i].ports[p][0]+"</a></li>";
+                        html += "<a href='http://"+links[i].host+":"+links[i].ports[p][1]+"'>"
+                                +"http://"+links[i].host+":"+links[i].ports[p][0]+"</a>; ";
                     }
-                    html += "</ul>";
-                    */
+                    html += "</p>";
                     for(var p in links[i].ports) {
                         if(links[i].ports[p][0] == '9001' ) {
                             html += "<iframe src='http://"+links[i].host+":"+links[i].ports[p][1]+"'></iframe>";
