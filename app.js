@@ -56,7 +56,7 @@ window.onload = function() {
           var db = data[i];
           if(!db.match(/^_/) && !db.match(/_history$/)) {
             var recorte =render('#recorte-tmpl');
-            recorte.querySelector(".db_name").innerHTML=db.toUpperCase().replace(/_/g," ");
+            recorte.querySelector(".db_name").innerHTML=db.replace(/_/g," ");
             var links = recorte.querySelectorAll("a");
             for(var l=0;l<links.length;l++) {
               var link = links[l];
