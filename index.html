@@ -31,34 +31,32 @@
 
     <div class="col-md-9" id="recortes">
       <h2>Ferramentas</h2>
+
       <div class='recorte'>
-        <h3>GERAL</h3>
+        <h3>Geral</h3>
         <ul>
           <li> <a href="/floradata" target='_blank' class='btn btn-default'> Flora </a> </li>
           <li> <a href="/connect" target='_blank' class='btn btn-default'> Usuários </a> </li>
+          <!--
           <li> <a href="/apps/biblio" target='_blank' class='btn btn-default'> Bibliografia </a> </li> 
           <li> <a href="/apps/imageapp" target='_blank' class='btn btn-default'> Imagens </a> </li>
+          -->
         </ul>
       </div>
+
       <template id="recorte-tmpl">
       <div class="recorte">
         <h3><span class='db_name'>{{db_name}}</span></h3>
-        <div class="recorte-in">
-          <h4>Consolidação, Análise e validação</h4>
           <ul>
             <li> <a href="/checklist/{{db}}" target='_blank' class='btn btn-default'> Taxonomia </a> </li>
             <li><span class="glyphicon glyphicon-arrow-right"></span></li>
             <li> <a href="/occurrences/{{db}}/workflow" target='_blank' class='btn btn-default'> Ocorrências </a> </li>
             <li><span class="glyphicon glyphicon-arrow-right"></span></li> 
             <li> <a href="/profiles/{{db}}/workflow" target='_blank' class='btn btn-default'> Consolidação, análise e <strong>validação</strong> </a> </li>
-            <li><span class="glyphicon glyphicon-ok"></span></li>
-          </ul>
-          <h4>Avaliação de risco de extinção</h4>
-          <ul>
+            <li><span class="glyphicon glyphicon-arrow-right"></span></li> 
             <li> <a href="/assessment/{{db}}/workflow" target='_blank' class='btn btn-default'> Avaliação </a>
             </li> <li><span class="glyphicon glyphicon-ok"></span></li> 
           </ul>
-        </div>
       </div>
       </template>
     </div>

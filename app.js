@@ -49,26 +49,29 @@ window.onload = function() {
       $("#logout").click(function(){  Connect.logout(); });
     }
 
-    var data = ["plantas_raras_cerrado","planos_cerrado","prioritarias_2014","rio_de_janeiro","aberto"];
 
-    //$.getJSON("http://cncflora.jbrj.gov.br/datahub/_all_dbs?callback=?",function(data) {
-        for(var i in data) {
-          var db = data[i];
-          if(!db.match(/^_/) && !db.match(/_history$/)) {
-            var recorte =render('#recorte-tmpl');
-            recorte.querySelector(".db_name").innerHTML=db.replace(/_/g," ");
-            var links = recorte.querySelectorAll("a");
-            for(var l=0;l<links.length;l++) {
-              var link = links[l];
-              var href = link.getAttribute("href");
-              if(href.match(/db/)) {
-                link.setAttribute("href",href.replace("{{db}}",db));
+    recortes();
+
+    function recortes() {
+      $.getJSON("/datahub/_all_dbs",function(data) {
+          for(var i in data) {
+            var db = data[i];
+            if(!db.match(/^_/) && !db.match(/_history$/)) {
+              var recorte =render('#recorte-tmpl');
+              recorte.querySelector(".db_name").innerHTML=db.replace(/_/g," ");
+              var links = recorte.querySelectorAll("a");
+              for(var l=0;l<links.length;l++) {
+                var link = links[l];
+                var href = link.getAttribute("href");
+                if(href.match(/db/)) {
+                  link.setAttribute("href",href.replace("{{db}}",db));
+                }
               }
-            }
 
-            recorte.into("#recortes");
+              recorte.into("#recortes");
+            }
           }
-        }
-      //});
+      });
+    }
 
 }
