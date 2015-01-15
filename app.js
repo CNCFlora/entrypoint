@@ -53,7 +53,7 @@ window.onload = function() {
     recortes();
 
     function recortes() {
-      $.getJSON("/datahub/_all_dbs",function(data) {
+      $.getJSON("/couchdb/_all_dbs",function(data) {
           for(var i in data) {
             var db = data[i];
             if(!db.match(/^_/) && !db.match(/_history$/)) {
