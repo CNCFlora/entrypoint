@@ -1,7 +1,10 @@
-FROM ubuntu:12.04
+FROM debian:wheezy
 
-RUN apt-get update
-RUN apt-get install -y apache2
+RUN sed -i -e 's/http.debian.net/ftp.us.debian.org/g' /etc/apt/sources.list && \
+    apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y apache2 && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
