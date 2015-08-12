@@ -12,6 +12,7 @@ function render(sel) {
 
 window.onload = function() {
 
+  /*
     var user={"roles":[]};
 
     if(typeof Connect == 'function') {
@@ -48,6 +49,7 @@ window.onload = function() {
       $("#login").click(function(){  Connect.login(); });
       $("#logout").click(function(){  Connect.logout(); });
     }
+    */
 
 
     recortes();
